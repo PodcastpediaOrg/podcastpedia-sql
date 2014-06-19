@@ -11,7 +11,7 @@ DB setup and sql statements relevant for the MySql database backing Podcastpedia
   * The development database for Podcastpedia runs on port **3307**, so install the database on that port, or change the port in [_jett9.xml_](https://github.com/podcastpedia/podcastpedia-web/blob/master/src/main/resources/config/jetty9.xml) or [_context.xml_](https://github.com/podcastpedia/podcastpedia-web/blob/master/src/main/webapp/META-INF/context.xml) file, depending whether you are using Jetty or Tomcat for testing the application 
 3. __Optional__ - install [MySQL Workbench](http://www.mysql.com/products/workbench/) for easy DB development and administration
 4. Setup MySQL configuration file
-  1. For Windows place the configuration file where the MySQL server is installed - the [my.ini](http://some_link) file from above is an example used on a Windows 7 machine 
+  1. For Windows place the configuration file where the MySQL server is installed - the [my.ini](https://github.com/podcastpedia/podcastpedia-sql/blob/master/_prepare_database_for_development/my.ini) file from above is an example used on a Windows 7 machine 
   2. For linux you need to use .cnf files. You can see in this blog post -[Optimizing MySQL server settings](http://www.codingpedia.org/ama/optimizing-mysql-server-settings/) - how the MySQL database is configured in production for [Podcastpedia.org](http://www.podcastpedia.org)
 
 ### Connect to the MySql console
@@ -80,13 +80,13 @@ Instead to execute all these commands manually, you can alternatively execute th
 `mysql < "PATH_TO_FILE\prepare_database_for_import.sql"`
 
 ### Import database from file
-Once the "pcmDB" and "pcm" user are set up, unzip the "podcastpedia-2014-06-17-dev-db.zip" file and import the database data into the pcmDB by issuing the following command on the command line:
+Once the "pcmDB" and "pcm" user are set up, unzip the ["podcastpedia-2014-06-17-dev-db.zip"](https://github.com/podcastpedia/podcastpedia-sql/tree/master/_prepare_database_for_development) file and import the database data into the pcmDB by issuing the following command on the command line:
 ```
 mysql -p -u pcm pcmDB < "PATH_TO_FILE\podcastpedia-2014-06-17-dev-db.sql"
 -- e.g. mysql -p -u pcm pcmDB < "C:\tmp\podcastpedia-2014-06-17-dev-db.sql"
 ```
 Wait for a bit and then you can verify that everything was OK by connecting to the mysql command line and issuing "show tables" or "select from a table" commands:
-```
+```sql 
 -- connect to the database with the development user
 mysql --host=localhost --user=pcm --password=pcm_pw
 

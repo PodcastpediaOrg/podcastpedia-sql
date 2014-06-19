@@ -127,6 +127,6 @@ mysql> SELECT * from categories;
 ```
 
 ### Next steps
-Now that the database is setup go on and prepare the Podcastpedia application and give it a try on your local host. 
+Now that the database is set up, go on and prepare the Podcastpedia application and give it a try on your local host. 
 
 

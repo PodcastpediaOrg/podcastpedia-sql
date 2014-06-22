@@ -125,6 +125,11 @@ mysql> SELECT * from categories;
 |          49 | history               | History            |
 +-------------+-----------------------+--------------------+
 ```
+### Backup the database (optional)
+If you ever want to backup up the database you can use _mysqldump_, by issuing a command similar to the following on the command line:
+```
+mysqldump pcmdb -u pcm -p -h 127.0.0.1 --single-transaction > c:/tmp/pcmdb-backup-2014.06.22.sql
+```
 
 ### Next steps
 Now that the database is set up, go on and prepare the Podcastpedia application and give it a try on your local host. 

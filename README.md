@@ -19,7 +19,7 @@ DB setup and sql statements relevant for the MySql database backing Podcastpedia
 ### Connect to the MySql console
 When installing the MySQL server, you were asked to set up a "root" user.
 ```
-mysql --host=localhost --user=root -p
+shell> mysql --host=localhost --user=root -p
 ```
 You will be asker for your "root" password
 
@@ -130,7 +130,7 @@ mysql> SELECT * from categories;
 ### Backup the database (optional)
 If you ever want to backup up the database you can use _mysqldump_, by issuing a command similar to the following on the command line:
 ```
-mysqldump pcmdb -u pcm -p -h 127.0.0.1 --single-transaction > c:/tmp/pcmdb-backup-2014.06.22.sql
+shell> mysqldump pcmdb -u pcm -p -h 127.0.0.1 --single-transaction > c:/tmp/pcmdb-backup-2014.06.22.sql
 ```
 
 ### Next steps

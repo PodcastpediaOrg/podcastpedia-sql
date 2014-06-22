@@ -7,7 +7,9 @@ DB setup and sql statements relevant for the MySql database backing Podcastpedia
 
 ### Install MySql 5.5 and above
 1. [Download MySQL Community Server](http://dev.mysql.com/downloads/mysql/) version 5.5 or 5.6 for the platform of your choice. 
-2. Install the MySQL Server 
+2. [Install the MySQL Server](http://dev.mysql.com/doc/refman/5.6/en/installing.html)
+  1. [Installing MySQL on Microsoft Windows](http://dev.mysql.com/doc/refman/5.6/en/windows-installation.html)
+  2. [Installing MySQL on Linux](http://dev.mysql.com/doc/refman/5.6/en/linux-installation.html)
   * The development database for Podcastpedia runs on port **3307**, so install the database on that port, or change the port in [_jett9.xml_](https://github.com/podcastpedia/podcastpedia-web/blob/master/src/main/resources/config/jetty9.xml) or [_context.xml_](https://github.com/podcastpedia/podcastpedia-web/blob/master/src/main/webapp/META-INF/context.xml) file, depending whether you are using Jetty or Tomcat for testing the application 
 3. __Optional__ - install [MySQL Workbench](http://www.mysql.com/products/workbench/) for easy DB development and administration
 4. Setup MySQL configuration file
